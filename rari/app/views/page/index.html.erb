@@ -1,0 +1,16 @@
+<section id="homepage">
+
+  <h1>Welcome to Rari</h1>
+  
+  <p>On Rari you can see a listing of cars put up for sale by their owners, along with their prices. Also, you can list your own car and try to sell it right on Rari. Bring home a brand new Enzo Ferrari today!</p>
+
+  <%= image_tag("enzo.jpg") %>
+
+  <nav id="menu">
+    <ul>
+      <li><%= link_to "Show me the cars!", cars_path %></li>
+      <li><%= link_to "List a car", new_car_path %></li>
+    </ul>
+  </nav>
+
+</section>

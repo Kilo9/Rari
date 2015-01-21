@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rari</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header id='top'>
+    <h1 id='logo'>Rari</h1>
+    <p id='motto'>find your new 'Rari today (or Honda Civic)</p>
+    <footer id='author'>created by: Jeremy Bassi</footer>
+  </header>
+
+  <section id='content'>
+    <%= yield %>
+  </section>
+
+</body>
+</html>

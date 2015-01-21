@@ -1,0 +1,62 @@
+body
+{
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica", "Arial"
+}
+
+body
+{
+    background: url("bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header#top 
+{
+    position: relative;
+    background-image: url("stripes.jpg");
+    margin: 10px auto 100px;
+    width: 60%;
+    height: 8em;
+}
+
+h1#logo
+{
+    margin: 0;
+    position: absolute;
+    font-size: 4em;
+    left: 5%;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+footer#author
+{
+    position: absolute;
+    font-size: 1.2em;
+    left: 10px;
+    bottom: 0;
+    color: black;
+    margin: 0px;
+}
+
+p#motto
+{
+    position: absolute;
+    font-size: 1.5em;
+    left: 10px;
+    bottom: 1.2em;
+    color: black;
+    margin: 0px;
+}
+
+section#content
+{
+    width: 80%;
+    margin: 0 auto 0;
+    background-color: white;
+}
