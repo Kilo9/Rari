@@ -60,6 +60,11 @@ section#homepage
     border-left: 1px solid #CCCCCC;
     border-radius: 15px;
   }
+
+  a:hover
+  {
+    background-color: #bb0000
+  }
 }
 
 section#about
@@ -100,5 +105,16 @@ section#about
   {
     font-size: 1.2em;
     font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  img
+  {
+    border: 5px solid grey;
+  }
+
+  img:hover
+  {
+    border: 5px solid orange;
   }
 }
