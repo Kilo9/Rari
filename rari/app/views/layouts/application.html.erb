@@ -12,6 +12,7 @@
     <h1 id='logo'>Rari</h1>
     <p id='motto'>find your new 'Rari today (or Honda Civic)</p>
     <footer id='author'>created by: Jeremy Bassi</footer>
+    <p id='user'><%= logged_in? ? current_user.name : "Guest" %><p>
   </header>
 
   <section id='content'>
