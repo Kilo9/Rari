@@ -54,6 +54,19 @@ p#motto
     margin: 0px;
 }
 
+p#user
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 3em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
 section#content
 {
     width: 80%;
