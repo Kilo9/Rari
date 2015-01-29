@@ -15,10 +15,17 @@ class CarsController < ApplicationController
   # GET /cars/new
   def new
     @car = Car.new
+    
+    unless logged_in?
+      redirect_to :back, notice: 'Please sign up to list a car!'
+    end
   end
 
   # GET /cars/1/edit
-  def edit
+  def edit 
+    unless logged_in? && @car.user_id == current_user.id
+      redirect_to request.env['HTTP_REFERER'] || root_url , notice: 'You can only edit your own listings!'
+    end
   end
 
   # POST /cars

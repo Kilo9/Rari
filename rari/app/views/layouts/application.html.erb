@@ -19,6 +19,19 @@
   </header>
 
   <nav id='side'>
+    <section id='user_info'>
+       
+    </section>
+
+    <%= link_to("Home", page_index_path) %>
+    <%= link_to("About", page_about_path) %>
+    <%= link_to("All Cars", cars_path) %>
+    <%= link_to("List a Car", new_car_path) %>
+    <%= link_to("See Users", users_path) %>
+
+    <% if logged_in? %>
+      <%= link_to("Edit Profile", edit_user_path(current_user)) %>
+    <% end %>
 
   </nav>
 
@@ -29,8 +42,8 @@
     <% end %>
   <% end %>
 
-
   <section id='content'>
+    <p id='notice'><%= notice %></p>
     <%= yield %>
   </section>
 
