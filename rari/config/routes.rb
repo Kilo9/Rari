@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get 'page/about'
 
+  get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
+  get 'signup' => 'users#new'
+
   resources :cars
   resources :users
 
