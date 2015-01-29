@@ -13,13 +13,22 @@
     <p id='motto'>find your new 'Rari today (or Honda Civic)</p>
     <footer id='author'>created by: Jeremy Bassi</footer>
     <%= logged_in? ? link_to("Log Out", :logout, id: "log")  : link_to("Log In", :login, id: "log") %>
-    <% if logged_in? %>
-      <%= link_to(current_user.name, current_user, id: 'user')%>
-      <%= %>
-    <% else %>
+    <% unless logged_in? %>
       <%= link_to("Sign Up!", :signup, id: "signup") %>
     <% end %>
   </header>
+
+  <nav id='side'>
+
+  </nav>
+
+  <% if logged_in? %>
+    <%= link_to(current_user, id: "user") do %>
+      <h1 id="user_name"><%= current_user.name %></h1>
+      <p id="user_cars"><strong>Cars:</strong><%= current_user.cars ? current_user.cars.count : 0 %></p>
+    <% end %>
+  <% end %>
+
 
   <section id='content'>
     <%= yield %>

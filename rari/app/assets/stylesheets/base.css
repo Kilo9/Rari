@@ -2,11 +2,7 @@ body
 {
   width: 100%;
   height: 100%;
-  font-family: "Helvetica", "Arial"
-}
-
-body
-{
+  font-family: "Helvetica", "Arial";
   background: url("bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,13 +10,58 @@ body
   background-size: cover;
 }
 
+/* Top Yellow Rari Bar */
 header#top 
 {
   position: relative;
   background-image: url("stripes.jpg");
-  margin: 10px auto 100px;
+  margin: 10px auto 10px;
   width: 60%;
   height: 8em;
+}
+
+/* Container for all content of app */
+section#content
+{
+  position: relative;
+  left: 10%;
+  width: 60%;
+  margin: 0 auto 0;
+  background-color: white;
+}
+
+nav#side
+{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 20%;
+  background-color: red;
+}
+
+a#user
+{
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+}
+
+h1#user_name
+{
+  font-size: 2em; 
+  color: white;
+  background-color: steelblue;
+  padding: 4px;
+}
+
+p#user_cars
+{
+  font-size: 1.5em;
+  color: white;
+  background-color: steelblue;
+  padding: 4px;
 }
 
 h1#logo
@@ -54,24 +95,6 @@ p#motto
   margin: 0px;
 }
 
-section#content
-{
-  width: 80%;
-  margin: 0 auto 0;
-  background-color: white;
-}
-
-a#user
-{
-  position: absolute;
-  bottom: -60px;
-  left: 30px;
-  font-size: 3em;
-  text-decoration: none;    
-  background-color: red;
-  color: yellow;
-}
-
 a#log
 {
   position: absolute;
@@ -98,11 +121,10 @@ a#signup
 
 a#log:hover
 {
-
-  background-color: #0000ff
+  background-color: #0000ff;
 }
 
 a#signup:hover
 {
-  background-color: #0000ff
+  background-color: #0000ff;
 }
