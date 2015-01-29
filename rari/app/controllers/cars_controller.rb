@@ -25,6 +25,7 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(car_params)
+    @car.user_id = current_user.id
 
     @car.image = upload 
 
