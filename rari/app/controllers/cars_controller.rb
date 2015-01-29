@@ -26,6 +26,8 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
 
+    @car.image = upload 
+
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
@@ -69,6 +71,14 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:model, :year, :price, :desc)
+      params.require(:car).permit(:model, :year, :price, :desc, :image)
+    end
+
+    def upload
+      uploaded_io = params[:car][:image]
+      File.open(Rails.root.join('app', 'assets', 'images', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      return uploaded_io.original_filename
     end
 end
