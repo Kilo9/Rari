@@ -1,3 +1,93 @@
 // Place all the styles related to the cars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+section#car_show
+{
+  position: absolute;
+  height: 30vh;
+  width: 75vw;
+  background-color: white;
+  border: 10px solid red;
+
+  h1, h2, h3, p, a
+  {
+    margin: 0px;
+    padding: 4px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+  }
+
+  img#car_image
+  {
+    width: 33%;
+    height: 100%;
+  }
+
+  h1
+  {
+     position: absolute;
+     left: 35%;
+     top: 2vh;
+     font-size: 4vw;
+  }
+
+  h2
+  {
+     position: absolute;
+     font-size: 3vw;
+     left: 35%;
+     top: 8vh;
+  }
+
+  h3
+  {
+     position: absolute; 
+     left: 35%;
+     top: 14vh;
+     font-size: 4vw;
+     background-color: green;
+     color: white;
+  }
+
+  p
+  {
+    position: absolute;    
+    left: 35%;
+    top: 21vh;
+    font-size: 1vw;
+    max-width: 60%;
+  }
+
+  footer
+  {
+     position: absolute; 
+     left: 35%;
+     top: 27vh;
+     font-size: 1.5vw;
+     background-color: black;
+     color: red;
+     padding: 2px;
+  }
+
+  a:hover
+  {
+      color: yellow;
+  }
+
+  a#edit_link
+  {
+     position: absolute;
+     left: 85%;
+     top: 8vh;
+     font-size: 3vw;
+  }
+
+  a#back_link
+  {
+     position: absolute;
+     left: 70%;
+     top: 8vh;
+     font-size: 3vw;
+  }
+}

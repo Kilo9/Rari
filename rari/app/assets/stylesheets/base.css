@@ -146,7 +146,7 @@ a#log
   position: fixed;
   top: 29%;
   left: 2%;
-  font-size: 2em;
+  font-size: 2vw;
   text-decoration: none;
   background-color: #0ba0ff;
   color: white;
@@ -163,7 +163,7 @@ a#signup
   position: fixed;
   top: 33%;
   left: 2%;
-  font-size: 2em;
+  font-size: 2vw;
   text-decoration: none;
   background-color: #8030ff;
   color: white;

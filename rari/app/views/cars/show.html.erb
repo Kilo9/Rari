@@ -1,24 +1,18 @@
-<p>
-  <strong>Model:</strong>
-  <%= @car.model %>
-</p>
+<section id='car_show'>
+  <%= image_tag('uploads/' + @car.image, id: 'car_image') %>
 
-<p>
-  <strong>Year:</strong>
-  <%= @car.year %>
-</p>
+  <h1><%= @car.model %></h1>
 
-<p>
-  <strong>Price:</strong>
-  <%= @car.price %>
-</p>
+  <h2><%= @car.year %></h2>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @car.desc %>
-</p>
+  <h3><%= number_to_currency(@car.price) %></h3>
 
-<%= image_tag('uploads/' + @car.image) %>
+  <p><%= @car.desc %></p>
 
-<%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %>
+  <footer>Contact: <%= User.find(@car.user_id).name %> =&gt; <%= User.find(@car.user_id).email %></footer>
+  <% if logged_in? && @car.user_id && current_user.id = @car.user_id %>
+    <%= link_to 'Edit', edit_car_path(@car), id: 'edit_link' %>
+  <% end %>
+
+  <%= link_to 'Back', cars_path , id: 'back_link'%>
+</section>
