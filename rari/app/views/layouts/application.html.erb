@@ -45,8 +45,13 @@
 
   </nav>
 
+  <% if notice %>
+    <div id='notice_area'>
+      <p id='notice'><%= notice %></p>
+    </div>
+  <% end %>
+
   <section id='content'>
-    <p id='notice'><%= notice %></p>
     <%= yield %>
   </section>
 

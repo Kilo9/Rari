@@ -153,6 +153,11 @@ a#log
   padding: 2px 6px 2px 6px;
 }
 
+section#user_info > a#log
+{
+  left: 3%; 
+}
+
 a#signup
 {
   position: fixed;
@@ -206,11 +211,22 @@ a#signup:hover
   background-color: #0000ff;
 }
 
-#notice 
+p#notice 
 {
-  color: red;
+  color: green;
   font-size: 1.5em;
-  margin: 0px;
+}
+
+div#notice_area
+{
+  position: relative;
+  margin: 10px auto 10px;
+  text-align: center;
+  width: 50%;
+  left: 5%;
+  background-color: white;
+  padding: 2px;
+  border: 10px solid green;
 }
 
 .field_with_errors 
