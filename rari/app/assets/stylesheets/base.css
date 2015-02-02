@@ -134,12 +134,12 @@ img#logo_img
   top: 2%;
 }
 
-a#home_link { top: 38%; }
-a#about_link { top: 44%; }
-a#cars_link { top: 50%; }
-a#new_car_link { top: 56%; }
-a#users_link { top: 62%; }
-a#edit_user_link { top: 68%; }
+a#home_link { top: 41%; }
+a#about_link { top: 49%; }
+a#cars_link { top: 57%; }
+a#new_car_link { top: 65%; }
+a#users_link { top: 73%; }
+a#edit_user_link { top: 81%; }
 
 a#log
 {
@@ -161,7 +161,7 @@ section#user_info > a#log
 a#signup
 {
   position: fixed;
-  top: 33%;
+  top: 35%;
   left: 2%;
   font-size: 2vw;
   text-decoration: none;
