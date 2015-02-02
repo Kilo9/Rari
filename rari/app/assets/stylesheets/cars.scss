@@ -91,3 +91,104 @@ section#car_show
      font-size: 2.5vw;
   }
 }
+
+section#list
+{
+    header
+    {
+        width: 100%;
+        height: 5vh;
+        background-color: black;
+        text-align: center;
+
+        h1
+        {
+            font-size: 2vw;
+            color: white;
+        }
+    }
+
+    section.car:hover { background-color: yellow; }
+
+    section.car
+    {
+        position: relative;
+        padding: 6px;
+        background-color: red;
+        height: 15vh;
+
+        img.car_image
+        {
+            float: left;
+            width: 20vh;
+            height: 15vh;
+        }
+
+        p
+        {
+           position: absolute;
+           display: inline-block;
+           color: white;
+           background-color: #aa0000;
+           padding: 4px;
+        }
+
+        a
+        {
+            position: absolute;
+            display: inline-block;
+            background-color: #0000ff;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            top: 5vh;
+            font-size: 5vh;
+        }
+
+        p.car_model
+        {
+            left: 27vh;
+            font-size: 3.5vh;
+        }
+
+        p.car_year
+        {
+            left: 27vh;
+            top: 9vh;
+            font-size: 2.5vh;
+        }
+
+        p.car_price
+        {
+            left: 35vh;
+            top: 9vh; 
+            font-size: 2.5vh;
+        }
+
+        a.car_view
+        {
+            left: 70vh;
+        }
+
+        a.car_view:hover
+        {
+            color: yellow;
+        }
+
+        a.car_edit
+        {
+            left: 55vh;
+        }
+
+        a.car_edit:hover
+        {
+            color: yellow;
+        }
+    }
+    
+    footer
+    {
+        background-color: black;
+        height: 5vh;
+    }
+}

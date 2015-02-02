@@ -1,41 +1,23 @@
 <section id="list">
 
-  <h1>'Raris on the Market</h1>
+  <header>
+      <h1>'Raris on the Market</h1>
+  </header>
 
   <% @cars.each do |car| %>
     <section class="car">
-       
+      <%= image_tag('uploads/' + car.image, class: 'car_image') %>
+      <p class='car_model'><%= car.model %></p>
+      <p class='car_year'><%= car.year %></p>
+      <p class='car_price'><%= number_to_currency(car.price) %></p>
+      <%= link_to("View", car_path(car), class: "car_view") %> 
+      <% if logged_in? && car.user_id && current_user.id == car.user_id %>
+        <%= link_to("Edit", edit_car_path(car), class: "car_edit") %>
+      <% end %>
     </section>
   <% end %>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Model</th>
-        <th>Year</th>
-        <th>Price</th>
-        <th>Desc</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @cars.each do |car| %>
-        <tr>
-          <td><%= car.model %></td>
-          <td><%= car.year %></td>
-          <td><%= car.price %></td>
-          <td><%= car.desc %></td>
-          <td><%= link_to 'Show', car %></td>
-          <td><%= link_to 'Edit', edit_car_path(car) %></td>
-          <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'List your own!', new_car_path %>
+  <footer>
+  </footer>
 
 </section>

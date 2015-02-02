@@ -18,16 +18,16 @@
   </header>
 
   <nav id='side'>
-     <% if logged_in? %>
-      <section id='user_info'>
-        <%= link_to(current_user, id: "user") do %>
+    <% if logged_in? %>
+      <%= link_to(current_user, id: "user") do %>
+        <section id='user_info'>
           <h1 id="user_name"><%= current_user.name %></h1>
           <p id="user_cars">Cars: <strong><%= current_user.cars ? current_user.cars.count : 0 %></strong></p>
           <p id="user_birthday_label"><strong> Member since:</strong></p>
           <p id="user_birthday"><%= current_user.birthday %></p>
           <%= link_to("Log Out", :logout, id: "log") %>
-        <% end %>
-      </section>
+        </section>
+      <% end %>
     <% else %>
       <%= image_tag("ferrari.png", width: "8%", id: 'logo_img')%>
       <%= link_to("Sign Up!", :signup, id: "signup") %>

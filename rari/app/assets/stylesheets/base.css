@@ -16,9 +16,7 @@ header#top
   position: relative;
   left: 5%;
   background-image: url("stripes.jpg");
-  margin: 10px auto 10px;
-  width: 75%;
-  height: 8em;
+  margin: 10px auto 10px; width: 75%; height: 8em;
 }
 
 /* Container for all content of app */
