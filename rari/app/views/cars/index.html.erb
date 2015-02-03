@@ -10,6 +10,11 @@
         <%= link_to "Highest Price", cars_path(:filter => 'high'), id: 'high', class: (is_active?('high'))? 'selected' : ""  %> 
         <%= link_to "Lowest Price", cars_path(:filter => 'low'), id: 'low', class: (is_active?('low'))? 'selected' : ""  %> 
       </nav>
+      <%= form_tag(cars_path(:filter => params[:filter]), method: "get", id: "search_form") do %>
+        <%= label_tag(:query, "Search:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search") %>
+      <% end %>
   </header>
 
   <% @cars.each do |car| %>

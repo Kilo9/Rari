@@ -6,24 +6,26 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    #@cars = Car.all.paginate(:page => params[:page], :per_page => 4)
+    @cars = Car.all
+
+    if params[:query]
+      @cars = @cars.where("LOWER(model) LIKE ? OR price LIKE ? OR year LIKE ?", "%" + params[:query].downcase + "%", "%" + params[:query].downcase + "%", "%" + params[:query].downcase + "%")
+    end
 
     #filtering
     case params[:filter]
     when 'az'
-      @cars = Car.order(:model)
+      @cars = @cars.order(:model)
     when 'za'
-      @cars = Car.order(:model).reverse_order
+      @cars = @cars.order(:model).reverse_order
     when 'old'
-      @cars = Car.order(:year)
+      @cars = @cars.order(:year)
     when 'new'
-      @cars = Car.order(:year).reverse_order
+      @cars = @cars.order(:year).reverse_order
     when 'low'
-      @cars = Car.order(:price)
+      @cars = @cars.order(:price)
     when 'high'
-      @cars = Car.order(:price).reverse_order
-    else
-      @cars = Car.all
+      @cars = @cars.order(:price).reverse_order
     end
 
     @cars = @cars.paginate(:page => params[:page], :per_page => 4)
