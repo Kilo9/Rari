@@ -26,28 +26,28 @@ section#car_show
 
   h1
   {
-     position: absolute;
-     left: 35%;
-     top: 2vh;
-     font-size: 3vw;
+    position: absolute;
+    left: 35%;
+    top: 2vh;
+    font-size: 3vw;
   }
 
   h2
   {
-     position: absolute;
-     font-size: 2.5vw;
-     left: 35%;
-     top: 10vh;
+    position: absolute;
+    font-size: 2.5vw;
+    left: 35%;
+    top: 10vh;
   }
 
   h3
   {
-     position: absolute; 
-     left: 35%;
-     top: 17vh;
-     font-size: 3vw;
-     background-color: green;
-     color: white;
+    position: absolute; 
+    left: 35%;
+    top: 17vh;
+    font-size: 3vw;
+    background-color: green;
+    color: white;
   }
 
   p
@@ -61,134 +61,173 @@ section#car_show
 
   footer
   {
-     position: absolute; 
-     left: 35%;
-     top: 25vh;
-     font-size: 1.5vw;
-     background-color: black;
-     color: red;
-     padding: 2px;
+    position: absolute; 
+    left: 35%;
+    top: 25vh;
+    font-size: 1.5vw;
+    background-color: black;
+    color: red;
+    padding: 2px;
   }
 
   a:hover
   {
-      color: yellow;
+    color: yellow;
   }
 
   a#edit_link
   {
-     position: absolute;
-     left: 85%;
-     top: 10vh;
-     font-size: 2.5vw;
+    position: absolute;
+    left: 85%;
+    top: 10vh;
+    font-size: 2.5vw;
   }
 
   a#back_link
   {
-     position: absolute;
-     left: 70%;
-     top: 10vh;
-     font-size: 2.5vw;
+    position: absolute;
+    left: 70%;
+    top: 10vh;
+    font-size: 2.5vw;
   }
 }
 
 section#list
 {
-    header
-    {
-        width: 100%;
-        height: 5vh;
-        background-color: black;
-        text-align: center;
+  header
+  {
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    text-align: center;
+    line-height: 5vh;
 
-        h1
-        {
-            font-size: 2vw;
-            color: white;
-        }
+    h1
+    {
+      font-size: 2vw;
+      color: white;
+    }
+  }
+
+  section.car:hover { background-color: yellow; }
+
+  section.car
+  {
+    position: relative;
+    padding: 6px;
+    background-color: red;
+    height: 15vh;
+
+    img.car_image
+    {
+      float: left;
+      width: 20vh;
+      height: 15vh;
     }
 
-    section.car:hover { background-color: yellow; }
-
-    section.car
+    p
     {
-        position: relative;
-        padding: 6px;
-        background-color: red;
-        height: 15vh;
-
-        img.car_image
-        {
-            float: left;
-            width: 20vh;
-            height: 15vh;
-        }
-
-        p
-        {
-           position: absolute;
-           display: inline-block;
-           color: white;
-           background-color: #aa0000;
-           padding: 4px;
-        }
-
-        a
-        {
-            position: absolute;
-            display: inline-block;
-            background-color: #0000ff;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            top: 5vh;
-            font-size: 5vh;
-        }
-
-        p.car_model
-        {
-            left: 27vh;
-            font-size: 3.5vh;
-        }
-
-        p.car_year
-        {
-            left: 27vh;
-            top: 9vh;
-            font-size: 2.5vh;
-        }
-
-        p.car_price
-        {
-            left: 35vh;
-            top: 9vh; 
-            font-size: 2.5vh;
-        }
-
-        a.car_view
-        {
-            left: 70vh;
-        }
-
-        a.car_view:hover
-        {
-            color: yellow;
-        }
-
-        a.car_edit
-        {
-            left: 55vh;
-        }
-
-        a.car_edit:hover
-        {
-            color: yellow;
-        }
+      position: absolute;
+      display: inline-block;
+      color: white;
+      background-color: #aa0000;
+      padding: 4px;
     }
-    
-    footer
+
+    a
     {
-        background-color: black;
-        height: 5vh;
+      position: absolute;
+      display: inline-block;
+      background-color: #0000ff;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      top: 5vh;
+      font-size: 5vh;
     }
+
+    p.car_model
+    {
+      left: 27vh;
+      font-size: 3.5vh;
+    }
+
+    p.car_year
+    {
+      left: 27vh;
+      top: 9vh;
+      font-size: 2.5vh;
+    }
+
+    p.car_price
+    {
+      left: 35vh;
+      top: 9vh; 
+      font-size: 2.5vh;
+    }
+
+    a.car_view
+    {
+      left: 70vh;
+    }
+
+    a.car_view:hover
+    {
+      color: yellow;
+    }
+
+    a.car_edit
+    {
+      left: 55vh;
+    }
+
+    a.car_edit:hover
+    {
+      color: yellow;
+    }
+  }
+
+  footer
+  {
+    background-color: black;
+    height: 5vh;
+    line-height: 5vh;
+    text-align: center;
+
+    .pagination 
+    {
+      font-size: 2vw;
+
+      a
+      {
+        background:red;
+        color: white;
+      }
+
+      .previous_page 
+      { 
+        background:#ff0000;
+        color:white;
+      }
+      .previous_page.disabled
+      { 
+        background: black;
+        color: #777;
+      }
+      .current 
+      {
+        background: yellow;
+      }
+      .next_page
+      { 
+        background: #ff0000;
+        color: white;
+      }
+      .next_page.disabled
+      {
+        background: black;
+        color: #777;
+      }
+    }
+  }
 }
