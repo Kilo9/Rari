@@ -6,8 +6,27 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    #@cars = Car.all
-    @cars = Car.all.paginate(:page => params[:page], :per_page => 4)
+    #@cars = Car.all.paginate(:page => params[:page], :per_page => 4)
+
+    #filtering
+    case params[:filter]
+    when 'az'
+      @cars = Car.order(:model)
+    when 'za'
+      @cars = Car.order(:model).reverse_order
+    when 'old'
+      @cars = Car.order(:year)
+    when 'new'
+      @cars = Car.order(:year).reverse_order
+    when 'low'
+      @cars = Car.order(:price)
+    when 'high'
+      @cars = Car.order(:price).reverse_order
+    else
+      @cars = Car.all
+    end
+
+    @cars = @cars.paginate(:page => params[:page], :per_page => 4)
   end
 
   # GET /cars/1

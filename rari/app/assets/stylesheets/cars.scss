@@ -97,15 +97,34 @@ section#list
   header
   {
     width: 100%;
-    height: 5vh;
+    height: 8vh;
     background-color: black;
     text-align: center;
-    line-height: 5vh;
+    line-height: 4vh;
 
     h1
     {
       font-size: 2vw;
       color: white;
+      margin: 0px;
+    }
+
+    nav#filter
+    {
+      a
+      {
+        background-color: white;
+        color: red;
+        margin-right: 10px;
+        text-decoration: none;
+        padding: 6px;
+      }
+
+      a.selected
+      {
+        background-color: red;
+        color: white;
+      }
     }
   }
 
