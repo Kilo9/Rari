@@ -59,3 +59,67 @@ section#users_list
     background-color: #440000;
   }
 }
+
+section#user_show
+{
+  header
+  {
+    height: 10vh;      
+    line-height: 5vh;
+    background-color: yellow;
+    text-align: center;
+    padding: 2vh;
+  }
+
+  h1
+  {
+    margin-top: 0px;
+    margin-bottom: 2vh;
+    font-size: 5vh;   
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+  }
+
+  h2
+  {
+    margin: 0px;
+    font-size: 3vh; 
+    color: black;
+  }
+
+  section#user_cars
+  {
+    background-color: red;
+    text-align: center;
+
+    img.car_thumb
+    {
+      display: inline-block;
+      //width: 13vw;
+      //height: 13vw;
+      width: 150px;
+      height: 150px;
+      margin: 2vw;
+    }    
+  }
+
+  footer
+  {
+    background-color: yellow; 
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+
+    a
+    {
+      font-size: 4vh;
+      display: inline-block;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
