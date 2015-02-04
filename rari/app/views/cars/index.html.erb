@@ -3,17 +3,17 @@
   <header>
       <h1>'Raris on the Market</h1>
       <nav id='filter'>
-        <%= link_to "A-Z", cars_path(:filter => 'az'), id: 'az', class: (is_active?('az'))? 'selected' : "" %> 
-        <%= link_to "Z-A", cars_path(:filter => 'za'), id: 'za', class: (is_active?('za'))? 'selected' : ""  %>
-        <%= link_to "Newest", cars_path(:filter => 'new'), id: 'new', class: (is_active?('new'))? 'selected' : ""  %> 
-        <%= link_to "Oldest", cars_path(:filter => 'old'), id: 'old', class: (is_active?('old'))? 'selected' : ""  %> 
-        <%= link_to "Highest Price", cars_path(:filter => 'high'), id: 'high', class: (is_active?('high'))? 'selected' : ""  %> 
-        <%= link_to "Lowest Price", cars_path(:filter => 'low'), id: 'low', class: (is_active?('low'))? 'selected' : ""  %> 
+        <%= link_to "A-Z", cars_path(request.params.merge(:filter => 'az')), id: 'az', class: (is_active?('az'))? 'selected' : "" %> 
+        <%= link_to "Z-A", cars_path(request.params.merge(:filter => 'za')), id: 'za', class: (is_active?('za'))? 'selected' : ""  %>
+        <%= link_to "Newest", cars_path(request.params.merge(:filter => 'new')), id: 'new', class: (is_active?('new'))? 'selected' : ""  %> 
+        <%= link_to "Oldest", cars_path(request.params.merge(:filter => 'old')), id: 'old', class: (is_active?('old'))? 'selected' : ""  %> 
+        <%= link_to "Highest Price", cars_path(request.params.merge(:filter => 'high')), id: 'high', class: (is_active?('high'))? 'selected' : ""  %> 
+        <%= link_to "Lowest Price", cars_path(request.params.merge(:filter => 'low')), id: 'low', class: (is_active?('low'))? 'selected' : ""  %> 
       </nav>
-      <%= form_tag(cars_path(:filter => params[:filter]), method: "get", id: "search_form") do %>
+      <%= form_tag(cars_path, method: "get", id: "search_form") do %>
         <%= label_tag(:query, "Search:") %>
         <%= text_field_tag(:query) %>
-        <%= submit_tag("Search") %>
+        <%= submit_tag("Search", :name => nil) %>
       <% end %>
   </header>
 
