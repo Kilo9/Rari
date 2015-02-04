@@ -1,0 +1,61 @@
+section#users_list
+{
+  background-color: red;
+
+  h1, p, a
+  {
+    margin: 0px;
+  }
+
+  header
+  {
+    background-color: yellow;
+    text-align: center;
+
+    h1
+    {
+      font-size: 3em;   
+      color: red;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+    }
+  }
+
+  section.user
+  {
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    background-color: #990000;
+    margin-bottom: 2vh;
+
+    p
+    {
+      position: absolute;
+      display: inline-block;
+      color: white;
+      margin-right: 3vw;
+      font-size: 3vh;
+    }
+
+    p#user_name
+    {
+       left: 2vw; 
+    }
+
+    p#user_email
+    {
+       left: 25vw; 
+    }
+
+    p#user_number
+    {
+        left: 50vw;
+    }
+  }
+
+  section.user:hover
+  {
+    background-color: #440000;
+  }
+}
