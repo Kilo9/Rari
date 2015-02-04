@@ -1,3 +1,55 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+section#session
+{
+  text-align: center;
+  background-color: red;
+  padding: 20px;
+
+  h1
+  {
+    color: white;
+    font-size: 6vh;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    margin: 10px;
+  }
+
+  label
+  {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  div.field
+  {
+    margin: 20px; 
+  }
+
+  input
+  {
+    font-size: 1.5em;
+  }
+
+  a
+  {
+    font-size: 4vh;
+    background-color: #990000;
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+  }
+
+  a:hover
+  {
+     padding: 10px; 
+  }
+
+  form
+  {
+      margin: 30px;
+  }
+}
