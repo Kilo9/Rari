@@ -10,8 +10,9 @@
   <p><%= @car.desc %></p>
 
   <footer>Contact: <%= User.find(@car.user_id).name %> =&gt; <%= User.find(@car.user_id).email %></footer>
-  <% if logged_in? && @car.user_id && current_user.id = @car.user_id %>
+  <% if logged_in? && @car.user_id && current_user.id == @car.user_id %>
     <%= link_to 'Edit', edit_car_path(@car), id: 'edit_link' %>
+    <%= link_to 'Delete Listing', car_path(@car), data: { :confirm => 'Are you sure?'}, :method => 'delete', :id => 'delete_link' %>
   <% end %>
 
   <%= link_to 'Back', :back , id: 'back_link'%>
