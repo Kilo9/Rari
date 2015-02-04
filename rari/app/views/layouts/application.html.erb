@@ -40,6 +40,7 @@
     <%= link_to("List a Car", new_car_path, class: "nav_link", id: "new_car_link") %>
     <%= link_to("See Users", users_path, class: "nav_link", id: "users_link") %>
     <% if logged_in? %>
+      <%= link_to("View Profile", user_path(current_user), class: "nav_link", id: "show_user_link") %>
       <%= link_to("Edit Profile", edit_user_path(current_user), class: "nav_link", id: "edit_user_link") %>
     <% end %>
 

@@ -137,7 +137,8 @@ a#about_link { top: 49%; }
 a#cars_link { top: 57%; }
 a#new_car_link { top: 65%; }
 a#users_link { top: 73%; }
-a#edit_user_link { top: 81%; }
+a#show_user_link { top: 81%; }
+a#edit_user_link { top: 89%; }
 
 a#log
 {
