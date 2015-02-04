@@ -102,6 +102,13 @@ section#user_show
       height: 150px;
       margin: 2vw;
     }    
+
+    img.car_thumb:hover
+    {
+      border: 4px solid yellow;
+      width: 142px;
+      height: 142px;
+    }
   }
 
   footer
