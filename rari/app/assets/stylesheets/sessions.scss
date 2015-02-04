@@ -7,6 +7,15 @@ section#session
   background-color: red;
   padding: 20px;
 
+  p#alert
+  {
+    display: inline-block;
+    font-weight: bold;
+    background-color: white;
+    color: red;
+    padding: 10px;
+  }
+
   h1
   {
     color: white;
