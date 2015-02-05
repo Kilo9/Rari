@@ -18,6 +18,7 @@
     <% if logged_in? && current_user.id == @user.id %>
       <%= link_to 'Edit', edit_user_path(@user) %>
     <% end %>
-    <%= link_to 'Back', :back %>
+    <%= link_to 'Back', users_path %>
+    <%= link_to 'Delete Account', current_user, :method => 'delete', data: {confirm: 'Are you sure? All listings will be deleted as well.'}, id: 'delete' %>
   </footer>
 </section>
